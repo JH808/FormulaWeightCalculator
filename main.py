@@ -13,10 +13,10 @@ def FormulaWeightCalculate():
     formula_weight = 0
     formula = input("화학식 입력:")
 
-    if formula == 'exit': return "0"    # Quit
+    if formula == 'exit': return 0    # Quit
     elif formula.isalnum() is False:
         print('숫자와 영어(대소문자 구분)로만 작성해주세요.')
-        return "2" #retry
+        return 2 #retry
     else:
         x = re.findall('([A-Z][a-z]?)([0-9]*)', formula)
         for element, cnt in x:
@@ -31,13 +31,13 @@ def FormulaWeightCalculate():
 
     if formula_weight <= 0:
         print('제대로 된 화학식을 입력해주세요.')
-        return "2"  # retry
+        return 2  # retry
     else:
         print('화학식량은 ', formula_weight, '입니다.')
-        return "1"  # continue
+        return 1  # continue
 
 print('화학식량 계산기입니다. 화학식은 알파벳 대소문자를 구분하고, 숫자는 알파벳 뒤에 바로 작성해주세요. 예)CO2, CH4, CuSO4')
 print('종료를 원하신다면 exit을 입력하세요')
 while True:
     result = FormulaWeightCalculate()
-    if result == '0': break
+    if result == 0: break
