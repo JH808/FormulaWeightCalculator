@@ -36,7 +36,8 @@ def FormulaWeightCalculate():
         print('화학식량은 ', formula_weight, '입니다.')
         return 1  # continue
 
-print('화학식량 계산기입니다. 화학식은 알파벳 대소문자를 구분하고, 숫자는 알파벳 뒤에 바로 작성해주세요. 예)CO2, CH4, CuSO4')
+print('FormulaWeightCalculator')
+print('화학식은 알파벳 대소문자를 구분하고, 숫자는 알파벳 뒤에 바로 작성해주세요. 예)CH4, CuSO4')
 print('종료를 원하신다면 exit을 입력하세요')
 while True:
     result = FormulaWeightCalculate()
